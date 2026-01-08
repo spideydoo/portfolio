@@ -1,0 +1,77 @@
+.contact-popup-section {
+  display: grid;
+  height: 100vh;
+  width: 100%;
+  place-content: center;
+  z-index: 10;
+  /* grid-template-columns: 1fr 1fr; */
+  padding: 0 160px;
+  background-color: rgba(30, 30, 30, 0.52);
+  backdrop-filter: blur(30px);
+  grid-template-columns: repeat(auto-fit, minmax(min(90vw, 350px), 1fr));
+  column-gap: 20px;
+
+  position: fixed;
+  transform: translateX(2000px);
+  top: 0;
+}
+
+.contact-popup-section.shown {
+  position: fixed;
+  left: 0;
+  transform: translateX(0);
+  animation: fadeIn 0.25s forwards;
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+.contact-popup-section a {
+  color: white;
+}
+
+.menu-icon {
+  height: 35px;
+  background-color: var(--gray-theme);
+  width: 35px;
+  display: grid;
+  place-content: center;
+  border-radius: 20px;
+  cursor: pointer;
+  position: absolute;
+  top: 10px;
+  right: 20px;
+}
+
+.menu-icon img {
+  filter: brightness(0.25);
+  height: 14px;
+}
+
+.contact-popup-section .links {
+  padding: 40px 0;
+}
+
+.contact-popup-section .links a {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.contact-popup-section .links .icon {
+  width: 25px;
+}
+
+.contact-popup-section .links .link-icon {
+  width: 20px;
+}
+
+.contact-popup-section .field {
+  width: 100%;
+}

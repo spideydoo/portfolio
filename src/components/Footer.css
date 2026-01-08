@@ -1,0 +1,53 @@
+.footer {
+  margin-top: 20px;
+  background-color: #000;
+  color: white;
+  padding: 30px 0;
+  padding-bottom: 0;
+}
+
+.footer .cta {
+  display: flex;
+  align-items: center;
+  padding: 20px 0;
+}
+
+.footer .cta .arrow {
+  animation: arrowmotion 2s ease-in-out infinite;
+}
+
+@keyframes arrowmotion {
+  0% {
+    transform: translateX(-130px);
+  }
+  50% {
+    transform: translateX(-70px);
+  }
+  100% {
+    transform: translateX(-130px);
+  }
+}
+
+.footer .cta a {
+  color: white;
+  font-size: min(100px, 20vw);
+  margin-left: 10px;
+  transform: translateX(-60px);
+}
+
+.footer .copywrite {
+  padding: 10px 0;
+  text-align: center;
+  width: 100%;
+  margin-top: 20px;
+}
+
+@media screen and (max-width: 640px) {
+  .footer .cta .arrow {
+    display: none;
+  }
+
+  .footer .cta a {
+    transform: translateX(0px);
+  }
+}

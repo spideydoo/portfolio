@@ -1,0 +1,159 @@
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 6px 20px;
+  font-size: 14px;
+
+  position: fixed;
+  left: 0;
+  right: 0;
+  z-index: 2;
+  backdrop-filter: blur(20px);
+}
+
+.header .profile-pic {
+  height: 50px;
+  border-radius: 14px;
+}
+
+.header nav ul {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  list-style: none;
+}
+
+.header nav ul li {
+  cursor: pointer;
+}
+
+.header .left-section {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.header .left-section .availability {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px 14px;
+  background-color: white;
+  border-radius: 8px;
+  position: relative;
+  padding-right: 32px;
+  margin-right: 10px;
+}
+
+.header .left-section .availability .circle {
+  height: 10px;
+  width: 10px;
+  border-radius: 50%;
+  margin-left: 10px;
+  animation: circle 1s forwards infinite;
+  position: absolute;
+  right: 12px;
+}
+
+@keyframes circle {
+  0% {
+    height: 10px;
+    width: 10px;
+  }
+  50% {
+    height: 12px;
+    width: 12px;
+  }
+  100% {
+    height: 10px;
+    width: 10px;
+  }
+}
+
+.header .left-section .availability .circle.green {
+  background-color: #30b96a;
+}
+
+.header .left-section .availability .circle.red {
+  background-color: red;
+}
+
+.header .left-section .links {
+  background-color: var(--gray-theme);
+  padding: 8px 10px;
+  border-radius: 30px;
+}
+
+.header .left-section .links ul {
+  gap: 14px;
+}
+
+.header .left-section .links ul li {
+  padding: 5px 10px;
+  border-radius: 20px;
+  transition: background-color 0.15s;
+}
+
+.header .left-section .links ul li:hover {
+  background-color: white;
+}
+
+.header .right-section ul {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.header .right-section .contact-btn .container {
+  display: flex;
+  align-items: center;
+  width: 80px;
+  overflow: hidden;
+  transition: width 0.25s;
+}
+
+.header .right-section .contact-btn span {
+  text-wrap: nowrap;
+}
+
+.header .right-section .contact-btn {
+  background-color: var(--gray-theme);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 7px 14px;
+  border-radius: 20px;
+}
+
+.header .right-section .contact-btn .arrow {
+  transform: rotateZ(180deg);
+  margin-left: 4px;
+}
+
+.header .right-section .icon {
+  filter: brightness(0.25);
+  height: 20px;
+}
+
+.header .right-section .contact-btn:hover .container {
+  width: 100px;
+}
+
+.header .right-section .icon-btn {
+  height: 35px;
+  background-color: var(--gray-theme);
+  width: 35px;
+  display: grid;
+  place-content: center;
+  border-radius: 20px;
+}
+
+@media screen and (max-width: 800px) {
+  .header .left-section .links {
+    position: absolute;
+    bottom: -50px;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+}
