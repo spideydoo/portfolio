@@ -1,6 +1,6 @@
 .page-button {
-  background-color: black;
-  color: white;
+  background-color: var(--black);
+  color: var(--white);
   padding: 15px 35px;
   cursor: pointer;
   transition: box-shadow 0.25s;
@@ -10,7 +10,7 @@
 }
 
 .page-button:hover {
-  box-shadow: 5px 5px 20px rgb(195, 195, 195);
+  box-shadow: 5px 5px 20px var(--button-shadow);
 }
 
 main {
@@ -40,7 +40,7 @@ main {
 }
 
 .hidden-section .dark-layer {
-  background-color: rgba(56, 56, 56, 0.52);
+  background-color: var(--dark-layer);
   backdrop-filter: blur(10px);
   height: 100%;
   width: 100%;
@@ -67,12 +67,27 @@ main {
   right: -760px;
   width: 720px;
   font-size: 28px;
-  background-color: white;
+  background-color: var(--white);
   border-bottom-left-radius: 50px;
   border-top-left-radius: 50px;
   padding: 50px;
-  display: grid;
-  place-content: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  color: var(--black);
+}
+
+.hidden-section .theme-button {
+  border-radius: 20px;
+  background-color: var(--black);
+  padding: 10px 20px;
+  border: none;
+  color: var(--white);
+  cursor: pointer;
+  font-size: 13px;
+  margin-top: 15px;
 }
 
 @media screen and (max-width: 910px) {
@@ -144,7 +159,8 @@ main {
   /* display: flex;
   align-items: center;
   justify-content: space-between; */
-  height: 70vh;
+  height: 75vh;
+  max-height: 950px;
   /* display: grid;
   grid-template-columns: 0.5fr 1.5fr; */
   display: flex;
@@ -156,15 +172,16 @@ main {
   padding-top: 0;
 }
 
-@media screen and (max-width: 1020px) {
+@media screen and (max-width: 700px) {
   .hero-section {
-    flex-direction: column;
+    height: 80vh;
   }
 }
 
 .hero-section .logo {
   font-size: max(120px, 10vw);
   position: relative;
+  color: var(--black);
 }
 
 .hero-section .logo .crown-img {
@@ -179,6 +196,18 @@ main {
   width: 90%;
   font-size: max(25px, 4vw);
   margin-left: 35px;
+  text-align: center;
+  color: var(--black);
+}
+
+@media screen and (max-width: 1020px) {
+  .hero-section {
+    flex-direction: column;
+  }
+
+  .hero-section .hero-text .headline {
+    margin-left: 0px;
+  }
 }
 
 .hero-section .hero-text .headline span {
@@ -191,7 +220,7 @@ main {
   height: 5px;
   width: 0%;
   position: absolute;
-  background-color: black;
+  background-color: var(--black);
   left: 0;
   bottom: 2px;
   transition: width 0.5s;
@@ -212,6 +241,11 @@ main {
   left: 0;
 }
 
+.hero-section .hero-cta-container .hero-cta {
+  width: 180px;
+  text-align: center;
+}
+
 @media screen and (max-width: 490px) {
   .hero-section .hero-cta-container {
     flex-direction: column;
@@ -223,14 +257,20 @@ main {
 
 .what-i-do-section .what-i-do-text {
   font-size: 18px;
+  color: var(--black);
   /* word-spacing: 6px;
   line-height: 115%; */
 }
 
 .work-section .work-text {
   font-size: 18px;
+  color: var(--black);
   /* word-spacing: 6px;
   line-height: 115%; */
+}
+
+.services-section {
+  color: var(--black);
 }
 
 .services-section .service-cards {
@@ -243,17 +283,20 @@ main {
 .services-section .service-cards .service-card {
   /* max-width: 380px; */
   width: 100%;
-  background-color: #f0f0f0;
+  color: var(--black);
+  background-color: var(--service-card-off-white);
   display: flex;
   flex-direction: column;
   align-items: flex-start;
   justify-content: center;
   gap: 16px;
-  box-shadow: 0 0 20px #dedede;
+  /* box-shadow: 0 0 20px var(--service-shadow); */
   border-radius: 20px;
   padding: 20px;
   padding-bottom: 30px;
   position: relative;
+
+  border: 2px solid rgb(169, 169, 169);
 }
 
 .services-section .request-service-container {
@@ -268,6 +311,7 @@ main {
 
 .services-section .service-cards .service-card .service-image {
   height: 25px;
+  filter: var(--image-filter);
 }
 
 .services-section .service-cards .service-card .service-header {
@@ -280,7 +324,7 @@ main {
   width: 60px;
   height: 60px;
   border-radius: 50%;
-  border: 1px solid #d2d2d2;
+  border: 1px solid var(--off-white-variant-1);
   display: grid;
   place-content: center;
 }
@@ -299,16 +343,18 @@ main {
 }
 
 .hidden-section .hidden-info .menu-icon img {
-  filter: brightness(0.25);
+  filter: var(--image-filter);
   height: 14px;
 }
 
 .tech-stack-section .tech-stack-container {
-  background-color: #f0f0f0;
+  background-color: var(--tech-stack-off-white);
   padding: 20px 60px;
-  box-shadow: 0 0 20px #dedede;
+  /* box-shadow: 0 0 20px var(--off-white-variant); */
   width: 100%;
   border-radius: 20px;
+  border: 2px solid rgb(169, 169, 169);
+  color: var(--black);
 }
 
 .tech-stack-section .tech-stack-container ul {
@@ -322,10 +368,17 @@ main {
 
 .tech-stack-section .tech-stack-container ul li {
   cursor: pointer;
+  display: grid;
+  place-content: center;
+  margin-bottom: 10px;
 }
 
 .tech-stack-section .tech-stack-container ul li img {
   height: 50px;
+}
+
+.tech-stack-section .tech-stack-container img.tool-img-placeholder {
+  filter: var(--image-filter);
 }
 
 .tech-stack-section .tech-stack-container .tech-stack-info {
@@ -341,6 +394,13 @@ main {
   }
 }
 
+@media screen and (max-width: 500px) {
+  .tech-stack-section .tech-stack-container {
+    padding-left: 16px;
+    padding-right: 16px;
+  }
+}
+
 .tech-stack-section .tech-stack-container .img-container img {
   height: 30px;
 }
@@ -349,7 +409,7 @@ main {
   min-width: 60px;
   height: 60px;
   border-radius: 50%;
-  border: 1px solid #d2d2d2;
+  border: 1px solid var(--off-white-variant-1);
   display: grid;
   place-content: center;
 }
@@ -363,6 +423,7 @@ main {
 
 .process-section {
   position: relative;
+  color: var(--black);
 }
 
 .process-section .process-container {
@@ -404,6 +465,10 @@ main {
   font-size: 18px;
 }
 
+.about-section {
+  color: var(--black);
+}
+
 .about-section .about-text {
   font-size: 20px;
   text-indent: 25px;
@@ -418,7 +483,7 @@ main {
 
 .about-section .principles-section .sub-title {
   font-size: 20px;
-  color: #565656;
+  color: var(--grayish);
 }
 
 .about-section .principles-container {
@@ -436,6 +501,10 @@ main {
 .about-section .principles-section .principle .bullet {
   height: 25px;
   margin-right: 8px;
+}
+
+.contact-section {
+  color: var(--black);
 }
 
 .contact-section .main {
@@ -462,6 +531,7 @@ main {
 
 .contact-section .main .links .icon {
   width: 25px;
+  filter: var(--contact-icons-filter);
 }
 
 .contact-section .main .links .link-icon {

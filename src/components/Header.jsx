@@ -1,13 +1,15 @@
 import "./Header.css";
 
-export function Header({ showMenu, showContactMenu }) {
+export function Header({ showMenu, showContactMenu, setIntentValue }) {
   return (
     <header className="header">
       <div className="left-section">
-        <img src="images/box dude.jpg" className="profile-pic" />
+        <a href="#home">
+          <img src="images/box dude.jpg" className="profile-pic" />
+        </a>
         <div className="availability">
           <p className="availability-text">Available for Work</p>
-          <div className="circle green"></div>
+          <div className="circle"></div>
         </div>
         <nav className="links">
           <ul>
@@ -30,7 +32,13 @@ export function Header({ showMenu, showContactMenu }) {
         <ul>
           <li className="contact-btn">
             <a className="container" onClick={showContactMenu}>
-              <span>Contact Me</span>
+              <span
+                onClick={() => {
+                  setIntentValue("contact_me");
+                }}
+              >
+                Contact Me
+              </span>
               <img
                 className="icon arrow"
                 src="icons/arrow_left_alt_24dp_E3E3E3_FILL0_wght400_GRAD0_opsz24.svg"

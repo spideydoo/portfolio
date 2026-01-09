@@ -56,6 +56,10 @@ function Main({
   isContactMenuOpen,
   showContactMenu,
   setIsContactMenuOpen,
+  intentValue,
+  setIntentValue,
+  theme,
+  toggleTheme,
 }) {
   return (
     <main>
@@ -63,20 +67,27 @@ function Main({
         isMenuOpen={isMenuOpen}
         setIsMenuOpen={setIsMenuOpen}
         showContactMenu={showContactMenu}
+        setIntentValue={setIntentValue}
+        theme={theme}
+        toggleTheme={toggleTheme}
       />
       <ContactPopup
         isContactMenuOpen={isContactMenuOpen}
         setIsContactMenuOpen={setIsContactMenuOpen}
+        intentValue={intentValue}
       />
-      <HeroSection />
+      <HeroSection setIntentValue={setIntentValue} />
       <div className="section-divider"></div>
       <WhatIDo />
       <WorkSection />
-      <ServicesSection />
+      <ServicesSection
+        showContactMenu={showContactMenu}
+        setIntentValue={setIntentValue}
+      />
       <TechStack />
       <ProcessSection />
       <AboutSection />
-      <ContactSection />
+      <ContactSection intentValue={intentValue} />
     </main>
   );
 }
@@ -88,18 +99,33 @@ export function Homepage({
   showContactMenu,
   isContactMenuOpen,
   setIsContactMenuOpen,
+  intentValue,
+  setIntentValue,
+  toggleTheme,
+  theme,
 }) {
   return (
     <>
-      <Header showMenu={showMenu} showContactMenu={showContactMenu} />
+      <Header
+        showMenu={showMenu}
+        showContactMenu={showContactMenu}
+        setIntentValue={setIntentValue}
+      />
       <Main
         isMenuOpen={isMenuOpen}
         setIsMenuOpen={setIsMenuOpen}
         isContactMenuOpen={isContactMenuOpen}
         showContactMenu={showContactMenu}
         setIsContactMenuOpen={setIsContactMenuOpen}
+        intentValue={intentValue}
+        setIntentValue={setIntentValue}
+        toggleTheme={toggleTheme}
+        theme={theme}
       />
-      <Footer />
+      <Footer
+        showContactMenu={showContactMenu}
+        setIntentValue={setIntentValue}
+      />
     </>
   );
 }

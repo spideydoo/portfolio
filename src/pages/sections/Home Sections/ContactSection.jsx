@@ -1,6 +1,7 @@
 import { Form } from "../../../components/Form";
+import { info } from "../../../data";
 
-export function ContactSection() {
+export function ContactSection({ intentValue }) {
   return (
     <section id="contact" className="contact-section">
       <h3 className="section-title">
@@ -12,13 +13,12 @@ export function ContactSection() {
         ears.
       </p>
       <section className="main">
-        <Form />
+        <Form intentValue={intentValue} />
 
         <div className="links">
           <a className="link" href="mailto:spectacularspidey.og@gmail.com">
             <img src="icons/email.png" className="icon" />
-            spectacularspidey.og@gmail.com{" "}
-            <img className="link-icon icon" src="icons/link.svg" />
+            {info.email} <img className="link-icon icon" src="icons/link.svg" />
             {/* <img src="assets/Arrow 4.png" className="scribble arrow" /> */}
           </a>
         </div>

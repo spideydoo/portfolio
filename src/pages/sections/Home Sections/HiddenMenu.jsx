@@ -1,6 +1,13 @@
 // import { useState } from "react";
 
-export function HiddenMenu({ isMenuOpen, setIsMenuOpen, showContactMenu }) {
+export function HiddenMenu({
+  isMenuOpen,
+  setIsMenuOpen,
+  showContactMenu,
+  setIntentValue,
+  theme,
+  toggleTheme,
+}) {
   // let [timeoutId, setTimeoutId] = useState();
 
   function closeMenu() {
@@ -21,10 +28,20 @@ export function HiddenMenu({ isMenuOpen, setIsMenuOpen, showContactMenu }) {
         <div onClick={closeMenu} className="menu-icon">
           <img className="icon" src="icons/close.png" />
         </div>
-        <p className="info">I'd love to help build your next website...hehe</p>
-        <div className="page-button get-in-touch" onClick={showContactMenu}>
+        <img className="star-img" src="icons/Star 1.png" />
+        <p className="info">I'd love to help build your next Big Website</p>
+        <div
+          className="page-button get-in-touch"
+          onClick={() => {
+            showContactMenu();
+            setIntentValue("get_in_touch");
+          }}
+        >
           Get in Touch
         </div>
+        <button className="theme-button" onClick={toggleTheme}>
+          {theme === "light" ? "Dark" : "Light"} Theme
+        </button>
       </div>
     </section>
   );

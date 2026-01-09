@@ -1,0 +1,61 @@
+:root {
+  --body-bg: #f0f0f0;
+  --black: #000;
+  --white: #fff;
+  --dark-layer: rgba(56, 56, 56, 0.52);
+  --dark-layer-1: rgba(30, 30, 30, 0.52);
+  --off-white: #f0f0f0;
+  --service-card-off-white: #f0f0f0;
+  --service-shadow: #dedede;
+  --off-white-variant: #dedede;
+  --off-white-variant-1: #d2d2d2;
+  --grayish: #565656;
+  --gray-theme: rgba(237, 237, 237, 0.67);
+  --button-shadow: rgb(173, 173, 173);
+  --header-gray-theme: rgba(237, 237, 237, 0.67);
+  --tech-stack-off-white: #f0f0f0;
+
+  --image-filter: none;
+  --image-bright-filter: brightness(0.25);
+  --contact-icons-filter: none;
+
+  --availability-indicator-color: #7fca71;
+}
+
+[data-theme="dark"] {
+  --body-bg: #000000;
+  --black: #fff;
+  --white: #000;
+  --dark-layer: rgba(56, 56, 56, 0.52);
+  --dark-layer-1: rgba(30, 30, 30, 0.52);
+  --off-white: #f0f0f0;
+  --service-card-off-white: #0c0c0c;
+  --service-shadow: #2e2e2e;
+  --off-white-variant: #dedede;
+  --off-white-variant-1: #d2d2d2;
+  --grayish: #757575;
+  --gray-theme: rgba(237, 237, 237, 0.67);
+  --button-shadow: rgb(173, 173, 173);
+  --header-gray-theme: rgba(42, 42, 42, 0.67);
+  --tech-stack-off-white: #000000;
+
+  --image-filter: invert(1) brightness(1.2);
+  --image-bright-filter: brightness(1.2);
+  --contact-icons-filter: invert(1) brightness(1.2);
+
+  --availability-indicator-color: #7fca71;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+@font-face {
+  font-family: Poppins;
+  src: url(../Fonts/Poppins/Poppins-Regular.ttf);
+}
+
+@font-face {
+  font-family: Switzer;
+  src: url(../Fonts/switzer/Switzer-Regular.otf);
+}

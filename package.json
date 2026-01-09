@@ -1,7 +1,8 @@
 {
   "name": "web_site",
+  "base": "/my-portfolio/",
   "private": true,
-  "version": "0.0.0",
+  "version": "0.0.1",
   "type": "module",
   "homepage": "https://spideydoo.github.io/my-portfolio",
   "scripts": {
@@ -10,7 +11,7 @@
     "lint": "eslint .",
     "preview": "vite preview",
     "predeploy": "npm run build",
-    "deploy": "gh-pages -d build"
+    "deploy": "gh-pages -d dist"
   },
   "dependencies": {
     "@formspree/react": "^3.0.0",

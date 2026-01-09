@@ -1,4 +1,4 @@
-export function ServicesSection() {
+export function ServicesSection({ showContactMenu, setIntentValue }) {
   return (
     <section id="services" className="services-section">
       <h3 className="section-title">
@@ -54,7 +54,13 @@ export function ServicesSection() {
       </div>
 
       <div className="request-service-container">
-        <button className="request-service page-button">
+        <button
+          className="request-service page-button"
+          onClick={() => {
+            showContactMenu();
+            setIntentValue("request_my_service");
+          }}
+        >
           Request My Service
         </button>
       </div>

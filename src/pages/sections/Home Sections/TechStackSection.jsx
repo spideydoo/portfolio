@@ -76,6 +76,7 @@ export function TechStack() {
               alt={
                 selectedTool ? selectedTool.name : "Click a tool for more info"
               }
+              className={selectedTool ? "" : "tool-img-placeholder"}
             />
           </div>
           <div className="description">

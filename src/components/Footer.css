@@ -1,7 +1,7 @@
 .footer {
   margin-top: 20px;
   background-color: #000;
-  color: white;
+  color: #fff;
   padding: 30px 0;
   padding-bottom: 0;
 }
@@ -28,11 +28,12 @@
   }
 }
 
-.footer .cta a {
-  color: white;
+.footer .cta .lets-start-project {
+  /* color: var(--white); */
   font-size: min(100px, 20vw);
   margin-left: 10px;
   transform: translateX(-60px);
+  cursor: pointer;
 }
 
 .footer .copywrite {
@@ -47,7 +48,7 @@
     display: none;
   }
 
-  .footer .cta a {
+  .footer .cta .lets-start-project {
     transform: translateX(0px);
   }
 }

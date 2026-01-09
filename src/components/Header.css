@@ -39,11 +39,12 @@
   align-items: center;
   justify-content: space-between;
   padding: 10px 14px;
-  background-color: white;
+  background-color: var(--white);
   border-radius: 8px;
   position: relative;
   padding-right: 32px;
   margin-right: 10px;
+  color: var(--black);
 }
 
 .header .left-section .availability .circle {
@@ -71,17 +72,13 @@
   }
 }
 
-.header .left-section .availability .circle.green {
-  background-color: #30b96a;
-}
-
-.header .left-section .availability .circle.red {
-  background-color: red;
+.header .left-section .availability .circle {
+  background-color: var(--availability-indicator-color);
 }
 
 .header .left-section .links {
-  background-color: var(--gray-theme);
-  padding: 8px 10px;
+  background-color: var(--header-gray-theme);
+  padding: 12px 10px;
   border-radius: 30px;
 }
 
@@ -89,14 +86,14 @@
   gap: 14px;
 }
 
-.header .left-section .links ul li {
-  padding: 5px 10px;
+.header .left-section .links ul a {
+  padding: 8px 14px;
   border-radius: 20px;
   transition: background-color 0.15s;
 }
 
-.header .left-section .links ul li:hover {
-  background-color: white;
+.header .left-section .links ul a:hover {
+  background-color: var(--white);
 }
 
 .header .right-section ul {
@@ -118,7 +115,7 @@
 }
 
 .header .right-section .contact-btn {
-  background-color: var(--gray-theme);
+  background-color: var(--header-gray-theme);
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -132,7 +129,7 @@
 }
 
 .header .right-section .icon {
-  filter: brightness(0.25);
+  filter: var(--image-bright-filter);
   height: 20px;
 }
 
@@ -142,7 +139,7 @@
 
 .header .right-section .icon-btn {
   height: 35px;
-  background-color: var(--gray-theme);
+  background-color: var(--header-gray-theme);
   width: 35px;
   display: grid;
   place-content: center;
